@@ -388,3 +388,52 @@ section {
     flex-direction: row;
     justify-content: space-between;
 }
+.col{
+    display: flex;
+    flex-direction: column;
+
+}
+.col .ror{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 310px;
+    height: 519;
+}
+.col .ror .colcontent{
+    line-height: 5px;
+    justify-content: space-between;
+    width: 310px;
+    height: 519;
+    text-align: center;
+    font-weight: bold;
+    
+
+}
+
+.col .ror .colcontent img{
+    height: 370px;
+    width: 309px;
+    padding: 30px;
+}
+
+.col .ror2{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    width: 310px;
+    height: 519;
+}
+.col .ror2 .colcontent{
+    line-height: 5px;
+    justify-content: space-between;
+    width: 310px;
+    height: 519px;
+    text-align: center;
+    font-weight: bold;
+}
+.col .ror2 .colcontent img{
+    height: 370px;
+    width: 309px;
+    padding: 30px;
+}
