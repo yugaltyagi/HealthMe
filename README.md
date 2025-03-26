@@ -1,1 +1,1 @@
-So basically it a kind of project were we are creating a Chatbot which tell what kind of health issue you are suffering
+It's a web application for health monitoring that gives you information about foods and also lets you know what kind of ailment you have with our built-in chatbot.
