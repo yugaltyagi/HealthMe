@@ -5,12 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Me</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}">
 </head>
 
 <body>
@@ -18,12 +13,15 @@
 
     <h1 class="heading">CODEDEVTA</h1>
     <nav>
-        <li><a href="Home.html" style="color: black;"> Home</a></li>
-        <li><a href="Aboutus.Html" style="color: black;"> About us</a></li>
-        <li><a href="How to use" style="color: black;"> How to use</a></li>
-        <button class="button-19" role="button">login</button>
-    </nav>
+        <li><a href="{{ url_for('home_page') }}" style="color: black;"> Home</a></li>
+        <li><a href="{{ url_for('about_us') }}" style="color: black;"> About us</a></li>
 
+        <li><a href="How to use" style="color: black;">Contact Us</a></li>
+
+        <button class="button-19" role="button">
+            <a href="{{ url_for('login') }}" style="text-decoration: none; color: white;">Login</a>
+        </button>
+    </nav>
     <section>
         <div class="first_box">
             <div class="first_text ">
@@ -41,8 +39,8 @@
 
         <div class="second_box">
             <div class="chat_bot">
-                <a href="Bot.html" target=""><img style="border-radius: 50px;" src="Bot1.gif" alt="AI"></a>
-                <img src="doc.png" alt="" srcset="">
+                <a href="{{ url_for('chatbot') }}" target=""><img src="{{ url_for('static', filename='images/Bot1.gif') }}" alt="stat"></a>
+                <img src="{{ url_for('static', filename='images/doc.png') }}" alt="doc">
             </div>
         </div>
     </section>
@@ -50,24 +48,24 @@
     <div class="img">
         <div class="second_text">
             <p><span>FEATURES WE PROVIDE</span></p>
-            <p class="ABz">Calculating BMI <br>is easier <img src="Heart Rate.png">
+            <p class="ABz">Calculating BMI <br>is easier <img src="{{ url_for('static', filename='images/Heart Rate.png') }}" alt="stat">
             </p>
             <p class="third_class">We calculate your BMI index from<br>data like age, height, weight.</p>
         </div>
 
         <div class="imagess">
             <div class="img1">
-                <img src="diet 1.png" alt="diet">
+                <img src="{{ url_for('static', filename='images/diet 1.png') }}" alt="diet">
                 <p class="diettxt">Food Recomendation</p>
                 <p class="diettxt1">We provide food<br>recomendation<br>according to your<br>calorie requirements.</p>
             </div>
             <div class="img2">
-                <img src="chatbot 1.png" alt="chat">
+                <img src="{{ url_for('static', filename='images/chatbot 1.png') }}" alt="chat">
                 <p class="diettxt">Interactive Chatbot</p>
                 <p class="diettxt1">Solve your queries<br>by interacting with<br>our bot.</p>
             </div>
             <div class="img3">
-                <img src="stats-2 1.png" alt="stat">
+                <img src="{{ url_for('static', filename='images/stats-2 1.png') }}" alt="stat">
                 <p class="diettxt">Nutritional Value</p>
                 <p class="diettxt1">Get all the nutritional<br>values of your<br>preferred dish.</p>
             </div>
@@ -84,18 +82,18 @@
     </div>
     <div class="main_box">
         <div class="first_layer">
-            <div class="items" id="items-box"><img src="ICE CREAM.png" alt="">
+            <div class="items" id="items-box"><img src="{{ url_for('static', filename='images/PIZZA.png') }}" alt="pizza">
                 <p>Ice Cream</p>
             </div>
-            <div class="items"><img src="bURGEr.png" alt="">
+            <div class="items"><img src="{{ url_for('static', filename='images/Burger.png') }}" alt="">
                 <p>Burger</p>
             </div>
-            <div class="items"><img src="PIZZA.png" alt="">
+            <div class="items"><img src="{{ url_for('static', filename='images/PIZZA.png') }}" alt="">
                 <p>
                     Cheez Pizza
                 </p>
             </div>
-            <div class="items"><img src="ORANGE AND KIWI.png" alt="">
+            <div class="items"><img src="{{ url_for('static', filename='images/ORANGE AND KIWI.png') }}" alt="">
                 <p>
                     Orange & Kiwi Fruit
                 </p>
@@ -103,16 +101,16 @@
         </div>
 
         <div class="second_layer">
-            <div class="items"><img src="Soup.png" alt="">
+            <div class="items"><img src="{{ url_for('static', filename='images/Soup.png') }}" alt="">
                 <p>Tomato Soup</p>
             </div>
-            <div class="items"><img src="donut.png" alt="">
+            <div class="items"><img src="{{ url_for('static', filename='images/donut.png') }}" alt="">
                 <p>Donut</p>
             </div>
-            <div class="items"><img src="CAKE.png" alt="">
+            <div class="items"><img src="{{ url_for('static', filename='images/CAKE.png') }}" alt="">
                 <p>Cake</p>
             </div>
-            <div class="items"><img src="bURGEr.png" alt="">
+            <div class="items"><img src="{{ url_for('static', filename='images/Burger.png') }}" alt="">
                 <p>Ice Cream</p>
             </div>
         </div>
@@ -124,10 +122,9 @@
                 <p>Do you like these kinds of fast coding tutorials? Let me know in the comments section below.</p>
                 <button id="closeModal">Close</button>
             </div>
-                
         </div>
     </div>
-    <script src="Home.js"></script>
+    <script src="{{ url_for('static', filename='js/Home.js') }}"></script>
     <div class="ror">
 
     </div>
@@ -136,11 +133,11 @@
     <footer class="foot">
         <div class="foot1">
             <div class="firstpart">
-                <img src="logo.png" alt="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
                 <p class="foottxt">HealthyMe</p>
-                <p style="line-height: 36px; font-size: 21px;">Lorem ipsum dolor sit amet consectetur</p>
+                <p style="line-height: 36px; font-size: 21px; line-height: 30px;">Lorem ipsum dolor<br>amet consectetur</p>
 
-            </div>
+            </div>`
         </div>
         <div class="foot2">
             <div class="secondpart">
@@ -173,11 +170,11 @@
             </div>
         </div>
         <div class="foot5">
-            <div class="fifthpart">
+            <div class="fifthpart" style="line-height: 30px;">
                 <p class="foottxt">Contact us</p>
-                <p><img src="Email.png" alt="email">contact@company.com</p>
-                <p><img src="Phone.png" alt="call">(414) 687 - 5892</p>
-                <p><img src="Mark.png" alt="Location">794 Mcallister St
+                <p><img src="{{ url_for('static', filename='images/Email.png') }}" alt="email">contact@company.com</p>
+                <p><img src="{{ url_for('static', filename='images/Phone.png') }}" alt="call">(414) 687 - 5892</p>
+                <p><img src="{{ url_for('static', filename='images/Mark.png') }}" alt="Location">794 Mcallister St
                     San Francisco, 94102</p>
 
             </div>

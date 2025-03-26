@@ -1,0 +1,203 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background: #f9f9f9;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-select {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Left Section */
+.left-section {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-section h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+}
+
+.left-section p {
+    font-size: 14px;
+    margin-top: 10px;
+    color: black;
+}
+
+.left-section a {
+    color: #4A90E2;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Fitness Image */
+.fitness-image {
+    width: 450px;
+    /*max-width: 40%;*/
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    padding: 50px;
+    text-align: center;
+}
+
+/* Input Fields */
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background: white;
+    color: black;
+    font-size: 16px;
+}
+
+/* Sign In Button */
+.sign-in-btn {
+    width: 100%;
+    padding: 12px;
+    background: #4A90E2;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.sign-in-btn:hover {
+    background: #357ABD;
+}
+
+/* Social Login */
+.social-login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.social-login button {
+    width: 80px;
+    height: 45px;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.social-login img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+/* Forgot Password */
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        padding: 40px;
+    }
+
+    .fitness-image {
+        width: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .left-section, .right-section {
+        padding: 30px;
+    }
+}

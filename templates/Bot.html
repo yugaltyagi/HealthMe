@@ -6,7 +6,7 @@
     <meta name="viewport" 
           content="width=device-width, initial-scale=1.0">
     <title>ChatBot</title>
-    <link rel="stylesheet" href="bot.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bot.css') }}">
 </head>
 
 <body>
@@ -28,7 +28,7 @@
             <button id="sendBTN">Send</button>
         </div>
     </div>
-    <script src="bot.js" defer></script>
+    <script src="{{ url_for('static', filename='js/bot.js') }}" defer></script>
 </body>
 
 </html>

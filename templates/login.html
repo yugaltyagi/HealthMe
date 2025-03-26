@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthyMe - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+<body>
+    <div class="container">
+        
+        <nav>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HealthyMe Logo">
+                <span>HealthyMe</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">How to Use</a></li>
+            </ul>
+            <div class="nav-right">
+                <select class="language-select">
+                    <option>English</option>
+                    <option>हिन्दी</option>
+                </select>
+                <a href="{{ url_for('login') }}" class="sign-in">Sign in</a>
+                <a href="{{ url_for('register1') }}" class="register-btn">Register</a>
+            </div>
+        </nav>
+            
+    
+        <div class="left-section">
+            <h1>Sign In to <br> get your nutrients</h1>
+            <p>If you don’t have an account, you can <a href="{{ url_for('register1') }}">Register here!</a></p>
+            <img src="{{ url_for('static', filename='images/photo.jpg.png') }}" alt="Healthy Athlete" class="fitness-image">
+        </div>
+
+        <div class="right-section">
+            <h2>Welcome Back</h2>
+            <form method="POST" action="{{ url_for('login') }}">
+                <div class="input-field">
+                    <input type="email" name="email" placeholder="Enter Email" required>
+                </div>
+                <div class="input-field">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <a href="#" class="forgot-password">Recover Password?</a>
+                <button type="submit" class="sign-in-btn">Sign In</button>
+                <p>Or continue with</p>
+                <div class="social-login">
+                    <button class="google"><img src="{{ url_for('static', filename='images/google.png') }}" alt="Google"></button>
+                    <button class="apple"><img src="{{ url_for('static', filename='images/apple.png') }}" alt="Apple"></button>
+                    <button class="facebook"><img src="{{ url_for('static', filename='images/facebook.png') }}" alt="Facebook"></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          {% for category, message in messages %}
+            {% if category == 'error' %}
+              if (confirm("Error: {{ message }}")) {
+                // Handle "OK" button action (user clicked OK)
+                console.log("User clicked OK for error");
+              } else {
+                // Handle "Cancel" button action (user clicked Cancel)
+                console.log("User clicked Cancel for error");
+              }
+            {% endif %}
+          {% endfor %}
+        });
+      </script>
+    {% endif %}
+  {% endwith %}
+  
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

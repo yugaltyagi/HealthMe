@@ -5,16 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthyMe ABout Developers</title>
-    <link rel="stylesheet" href="Aboutus.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Aboutus.css') }}">
 </head>
 
 <body>
     <h1 class="heading">CODEDEVTA</h1>
     <nav>
-        <li><a href="Home.html" style="color: black;"> Home</a></li>
-        <li><a href="Aboutus.Html" style="color: black;"> About us</a></li>
-        <li><a href="How to use" style="color: black;"> How to use</a></li><button class="button-19"
-            role="button">login</button>
+        <li><a href="{{ url_for('home_page') }}" style="color: black;"> Home</a></li>
+        <li><a href="{{ url_for('about_us') }}" style="color: black;"> About us</a></li>
+        <li><a href="How to use" style="color: black;"> How to use</a></li>
+        <button class="button-19" role="button">
+            <a href="{{ url_for('login') }}" style="text-decoration: none; color: white;">Login</a>
+        </button>
     </nav>
     <div class="txtp">
         <h1>Hey! We are code devta and we are here to help you to </h1>
@@ -24,13 +26,13 @@
     <div class="col">
         <div class="row">
             <div class="container">
-                <img src="PIZZA.png" alt="Avatar" class="image">
+                <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
                 <div class="overlay">
                     <div class="text">Hello World</div>
                 </div>
             </div>
             <div class="container">
-                <img src="PIZZA.png" alt="Avatar" class="image">
+                <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
                 <div class="overlay">
                     <div class="text">this is piza</div>
                 </div>
@@ -38,13 +40,13 @@
         </div>
         <div class="row">
             <div class="container">
-                <img src="PIZZA.png" alt="Avatar" class="image">
+                <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
                 <div class="overlay">
                     <div class="text">Hello World</div>
                 </div>
             </div>
             <div class="container">
-                <img src="PIZZA.png" alt="Avatar" class="image">
+                <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
                 <div class="overlay">
                     <div class="text">this is piza</div>
                 </div>
@@ -60,16 +62,16 @@
         </div>
         <div class="innercontent2">
             <p>This is a Udit and he is our team leadeer</p>
-            <img src="PIZZA.png" alt="Avatar" class="image">
+            <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
         </div>
         <div class="innercontent">
-            <img src="PIZZA.png" alt="Avatar" class="image">
+            <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
             <p>This is a Udit and he is our team leadeer</p>
 
         </div>
         <div class="innercontent2">
             <p>This is a Udit and he is our team leadeer</p>
-            <img src="PIZZA.png" alt="Avatar" class="image">
+            <img src="{{ url_for('static', filename='images/Pizza.png') }}  " alt="Avatar" class="image">
         </div>
     </div>
     <div class="Codevta">

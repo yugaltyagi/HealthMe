@@ -4,29 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forgot Password - HealthyMe</title>
-    <link rel="stylesheet" href="Reset.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Reset.css') }}">
 </head>
 <body>
     <div class="container">
         <div class="left-section">
             <h1>Reset Your Password</h1>
-            <p>Enter your details to reset your password</p>
+            <p>Enter your email to reset your password.</p>
             <form id="forgotPasswordForm">
                 <input type="email" id="email" placeholder="Enter Email" required>
-                
-                <input type="password" id="Newpassword" placeholder="New Password" required>
-
-                <input type="password" id="ConfirmPassoword" placeholder="Confirm Password" required>
-
-
+                <input type="Password" id="Newpassword" placeholder="New Password" required>
+                <input type="Password" id="confirmPassword" id="" placeholder="Confirm Password" required>
                 <button type="submit">Reset Password</button>
             </form>
             <p><a href="login.html">Back to Login</a></p>
         </div>
         <div class="right-section">
-            <img src="logo.png" alt="HealthyMe">
+            <img src="{{ url_for('static', filename='images/diet 1.png') }}" alt="diet">
         </div>
     </div>
-    <script src="Reset.js"></script>
+    <script src="{{ url_for('static', filename='js/Reset.js') }}"></script>
 </body>
 </html>

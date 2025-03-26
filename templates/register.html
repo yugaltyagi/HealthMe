@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthyMe - Sign Up</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<body>
+    <div class="container">
+        
+        <header>
+            <div class="logo">HealthyMe<span class="dot">⚪</span></div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">How to use</a>
+            </nav>
+            <div class="auth">
+                <a href="{{ url_for('login') }}" class="signin">Sign in</a>
+                <a href="#" class="register">Register</a>
+            </div>
+        </header>
+
+
+        <div class="content">
+            <div class="left">
+                <h1>Sign Up to <br> get your nutrients</h1>
+                <br>
+                <br>
+                <p>If you already have an account <a href="{{ url_for('login') }}">Login here!</a></p>
+                <img src="{{ url_for('static', filename='images/doc.png') }}" alt="Fitness Man">
+            </div>
+            
+            <div class="right">
+                <h2>Welcome User</h2>
+                <form id="signupForm">
+                    <input type="text" id="name" placeholder="Enter Name" required>
+                    <input type="email" id="email" placeholder="Enter Email" required>
+                    <input type="password" id="password" placeholder="*******" required>
+                    <div class="row">
+                        <input type="number" id="age" placeholder="Age" required>
+                        <select id="gender" required>
+                            <option value="">Gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <input type="number" id="height" placeholder="Height (cm)" required>
+                        <input type="number" id="weight" placeholder="Weight (kg)" required>
+                    </div>
+                    <div class="row">
+                        <input type="text" id="bmi" placeholder="BMI" readonly>
+                        <select id="blood_group" required>
+                            <option value="">Blood Group</option>
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                        </select>
+                    </div>
+                    <input type="text" id="location" placeholder="Location" required>
+
+                    <button type="submit" class="btn">Register</button>
+                    <p class="or">Or continue with</p>
+                    <div class="socials">
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" width="40"></a>
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" width="40"></a>
+                        <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" width="40"></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="{{ url_for('static', filename='js/register.js') }}"></script>
+</body>
+</html>
