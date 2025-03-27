@@ -18,81 +18,6 @@ nav {
   gap: 5%;
 }
 
-.button-19 {
-  appearance: button;
-  background-color: #1899D6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: din-round, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: .8px;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
-  overflow: visible;
-  padding: 13px 16px;
-  text-align: center;
-  text-transform: uppercase;
-  touch-action: manipulation;
-  transform: translateZ(0);
-  transition: filter .2s;
-  user-select: none;
-  -webkit-user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  /* width: 100%; */
-}
-
-.button-19:after {
-  background-clip: padding-box;
-  background-color: #1CB0F6;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  bottom: -4px;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
-
-.button-19,
-.button-19:focus {
-  user-select: auto;
-}
-
-.button-19:hover:not(:disabled) {
-  filter: brightness(1.1);
-  -webkit-filter: brightness(1.1);
-}
-
-.button-19:disabled {
-  cursor: auto;
-}
-
-.button-19:active {
-  border-width: 4px 0 0;
-  background: none;
-}
-
-nav {
-  /* border: 2px solid black; */
-  background-color: beige;
-  padding: 10px;
-  margin-top: 20px;
-  display: flex;
-  justify-content: right;
-  gap: 5%;
-}
-
 nav li {
   list-style: none;
   font-family: din-round, sans-serif;
@@ -102,6 +27,80 @@ nav li {
   line-height: 20px;
   margin-top: 1%;
 }
+
+/* For mobile devices with screen width less than 768px */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    /* Stack items vertically */
+    gap: 10px;
+    /* Adjust gap between items */
+    text-align: center;
+    /* Center align content */
+  }
+
+  nav li {
+    font-size: 12px;
+    /* Reduce font size for smaller screens */
+    margin-top: 5px;
+    /* Adjust margin */
+  }
+
+  .button-19 {
+    padding: 10px 12px;
+    /* Adjust padding */
+    font-size: 13px;
+    /* Reduce font size */
+  }
+}
+
+/* For tablets and smaller desktops with screen width between 768px and 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  nav {
+    justify-content: space-around;
+    /* Distribute items evenly */
+    gap: 2%;
+    /* Adjust gap */
+  }
+
+  nav li {
+    font-size: 14px;
+    /* Slightly larger font size */
+  }
+
+  .button-19 {
+    padding: 12px 14px;
+    /* Adjust padding */
+    font-size: 14px;
+    /* Slightly larger font size */
+  }
+}
+
+/* For larger screens (default styles can be reused) */
+@media (min-width: 1024px) {
+  nav {
+    justify-content: right;
+    /* Align items to the right */
+    gap: 5%;
+    /* Keep the original gap */
+  }
+
+  nav li {
+    font-size: 15px;
+    /* Original font size */
+  }
+
+  .button-19 {
+    padding: 13px 16px;
+    /* Original padding */
+    font-size: 15px;
+    /* Original font size */
+  }
+}
+
+
+
+
 
 .txtp {
   display: flex;
@@ -126,6 +125,88 @@ nav li {
 .txtp p {
 
   text-align: center;
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .txtp {
+    font-size: 20px;
+    /* Reduce font size for smaller screens */
+    width: 90%;
+    /* Adjust width for mobile */
+    margin-top: 30px;
+    /* Adjust top margin */
+  }
+
+  .txtp h1 {
+    font-size: 24px;
+    /* Reduce font size of heading */
+    margin-top: 20px;
+    /* Adjust margin */
+  }
+
+  .txtp p {
+    font-size: 16px;
+    /* Reduce paragraph font size */
+    text-align: center;
+    /* Retain center alignment */
+  }
+}
+
+/* For tablets (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .txtp {
+    font-size: 25px;
+    /* Adjust font size for mid-sized screens */
+    width: 80%;
+    /* Slightly reduce width */
+    margin-top: 40px;
+    /* Adjust top margin */
+  }
+
+  .txtp h1 {
+    font-size: 28px;
+    /* Adjust font size for heading */
+    margin-top: 40px;
+    /* Adjust margin */
+  }
+
+  .txtp p {
+    font-size: 18px;
+    /* Adjust font size for paragraph */
+  }
+}
+
+/* For larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .txtp {
+    font-size: 30px;
+    /* Retain original font size */
+    width: 70%;
+    /* Retain original width */
+    margin-top: 50px;
+    /* Retain original margin */
+  }
+
+  .txtp h1 {
+    font-size: 30px;
+    /* Original heading font size */
+    margin-top: 50px;
+    /* Retain original margin */
+  }
+
+  .txtp p {
+    font-size: 20px;
+    /* Slightly larger font size for better readability */
+  }
+}
+
+.col {
+  justify-content: center;
+  margin: auto;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
 }
 
 .container {
@@ -172,14 +253,6 @@ nav li {
   text-align: center;
 }
 
-.col {
-  justify-content: center;
-  margin: auto;
-  flex-direction: column;
-  display: flex;
-  justify-content: space-between;
-}
-
 h1 {
   text-align: center;
   color: #008CBA;
@@ -195,6 +268,175 @@ p {
   display: flex;
   flex-direction: row;
   row-gap: 10px;
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .col {
+    flex-direction: column;
+    /* Stack elements vertically */
+    margin: 0 auto;
+    /* Center align */
+    justify-content: center;
+    /* Center elements */
+  }
+
+  .container {
+    flex-direction: column;
+    /* Stack elements vertically */
+    width: 90%;
+    /* Adjust width */
+    margin: 10px auto;
+    /* Center containers */
+  }
+
+  .image {
+    width: 100%;
+    /* Full width for smaller screens */
+    height: auto;
+    /* Adjust height dynamically */
+  }
+
+  .overlay {
+    height: auto;
+    /* Adjust overlay height */
+    border-radius: 20px;
+    /* Reduce border radius */
+  }
+
+  .text {
+    font-size: 16px;
+    /* Adjust font size for smaller screens */
+  }
+
+  h1 {
+    font-size: 24px;
+    /* Reduce font size for headings */
+  }
+
+  p {
+    font-size: 14px;
+    /* Adjust font size for paragraphs */
+  }
+
+  .row {
+    flex-direction: column;
+    /* Stack rows vertically */
+    row-gap: 15px;
+    /* Adjust gap */
+  }
+}
+
+/* For tablets (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .col {
+    margin: auto;
+    /* Center align */
+    flex-direction: column;
+    /* Stack elements vertically */
+  }
+
+  .container {
+    flex-direction: row;
+    /* Keep row layout */
+    width: 80%;
+    /* Adjust width for tablets */
+    margin: 15px auto;
+    /* Center containers */
+  }
+
+  .image {
+    width: 80%;
+    /* Adjust image size */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  .overlay {
+    border-radius: 30px;
+    /* Adjust border radius */
+  }
+
+  .text {
+    font-size: 18px;
+    /* Slightly larger font for tablets */
+  }
+
+  h1 {
+    font-size: 28px;
+    /* Adjust heading size */
+  }
+
+  p {
+    font-size: 16px;
+    /* Adjust font size for paragraphs */
+  }
+
+  .row {
+    flex-direction: row;
+    /* Keep row layout */
+    row-gap: 20px;
+    /* Adjust gap */
+  }
+}
+
+/* Default styles for larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .col {
+    flex-direction: column;
+    /* Original layout */
+    justify-content: space-between;
+    /* Original alignment */
+    margin: auto;
+    /* Center align */
+  }
+
+  .container {
+    flex-direction: row;
+    /* Original row layout */
+    width: 100%;
+    /* Original width */
+    max-width: 300px;
+    /* Original max-width */
+    margin: 10px;
+    /* Original margin */
+  }
+
+  .image {
+    width: 100%;
+    /* Original full-width */
+    height: 100%;
+    /* Original height */
+  }
+
+  .overlay {
+    border-radius: 37px;
+    /* Original border radius */
+    height: 95%;
+    /* Original height */
+  }
+
+  .text {
+    font-size: 20px;
+    /* Original font size */
+  }
+
+  h1 {
+    font-size: 30px;
+    /* Retain original heading size */
+  }
+
+  p {
+    font-size: 18px;
+    /* Slightly larger font size for readability */
+  }
+
+  .row {
+    flex-direction: row;
+    /* Original row layout */
+    row-gap: 10px;
+    /* Original gap */
+  }
 }
 
 .content {
@@ -253,6 +495,136 @@ p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    /* Stack content vertically */
+    border-radius: 15px;
+    /* Reduce border radius */
+    padding: 10px;
+    /* Add padding for smaller screens */
+  }
+
+  .content .innercontent,
+  .content .innercontent2 {
+    flex-direction: column;
+    /* Stack items vertically */
+    justify-content: center;
+    /* Center align items */
+    align-items: center;
+    /* Center align items */
+    margin-bottom: 20px;
+    /* Increase spacing */
+  }
+
+  .content .innercontent img,
+  .content .innercontent2 img {
+    width: 90%;
+    /* Make images take most of the screen width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 0;
+    /* Remove right margin */
+    border-radius: 15px;
+    /* Reduce border radius */
+  }
+
+  .innercontent p,
+  .content .innercontent2 p {
+    font-size: 20px;
+    /* Reduce font size */
+    text-align: center;
+    /* Center align text */
+    margin-top: 20px;
+    /* Adjust top margin */
+    width: 90%;
+    /* Adjust width for smaller screens */
+  }
+}
+
+/* For tablets (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    /* Stack content vertically */
+    padding: 20px;
+    /* Adjust padding */
+    border-radius: 20px;
+    /* Adjust border radius */
+  }
+
+  .content .innercontent,
+  .content .innercontent2 {
+    flex-direction: row;
+    /* Keep row layout */
+    justify-content: space-around;
+    /* Space items evenly */
+  }
+
+  .content .innercontent img,
+  .content .innercontent2 img {
+    width: 70%;
+    /* Adjust image width */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 10px;
+    /* Adjust margin */
+    border-radius: 20px;
+    /* Adjust border radius */
+  }
+
+  .innercontent p,
+  .content .innercontent2 p {
+    font-size: 24px;
+    /* Adjust font size */
+    width: 70%;
+    /* Adjust text width */
+    text-align: center;
+    /* Center align text */
+  }
+}
+
+/* For larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .content {
+    flex-direction: column;
+    /* Retain original layout */
+    border-radius: 30px;
+    /* Original radius */
+  }
+
+  .content .innercontent,
+  .content .innercontent2 {
+    flex-direction: row;
+    /* Retain original row layout */
+    justify-content: space-around;
+    /* Original alignment */
+  }
+
+  .content .innercontent img,
+  .content .innercontent2 img {
+    width: 400px;
+    /* Retain original width */
+    height: 425px;
+    /* Retain original height */
+    margin-right: 20px;
+    /* Retain original margin */
+    border-radius: 30px;
+    /* Original border radius */
+  }
+
+  .innercontent p,
+  .content .innercontent2 p {
+    font-size: 30px;
+    /* Retain original font size */
+    width: 400px;
+    /* Retain original width */
+    text-align: left;
+    /* Original text alignment */
+  }
+}
+
 .Codedevta .heading {
   display: flex;
   justify-content: center;
@@ -276,6 +648,91 @@ p {
   margin-top: 50px;
 }
 
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .Codedevta .heading {
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: center;
+    /* Center align */
+    text-align: center;
+    /* Center heading text */
+  }
+
+  .Codedevta .heading h1 {
+    font-size: 30px;
+    /* Reduce font size */
+  }
+
+  .Codedevta .first,
+  .Codedevta .second {
+    flex-direction: column;
+    /* Stack content vertically */
+    justify-content: center;
+    /* Center align content */
+    font-size: 20px;
+    /* Adjust font size */
+    margin-top: 20px;
+    /* Adjust margin */
+  }
+}
+
+/* For tablets (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Codedevta .heading {
+    justify-content: center;
+    /* Center align */
+    text-align: center;
+    /* Center heading text */
+  }
+
+  .Codedevta .heading h1 {
+    font-size: 40px;
+    /* Adjust heading font size */
+  }
+
+  .Codedevta .first,
+  .Codedevta .second {
+    flex-direction: row;
+    /* Retain horizontal layout */
+    justify-content: space-evenly;
+    /* Space items evenly */
+    font-size: 30px;
+    /* Adjust font size */
+    margin-top: 30px;
+    /* Adjust margin */
+  }
+}
+
+/* Default styles for larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .Codedevta .heading {
+    display: flex;
+    /* Retain original layout */
+    justify-content: center;
+    /* Retain alignment */
+  }
+
+  .Codedevta .heading h1 {
+    font-size: 50px;
+    /* Original font size */
+    color: #008CBA;
+    /* Original color */
+  }
+
+  .Codedevta .first,
+  .Codedevta .second {
+    display: flex;
+    /* Retain original layout */
+    justify-content: space-between;
+    /* Retain original alignment */
+    margin-top: 50px;
+    /* Original margin */
+    font-size: 40px;
+    /* Original font size */
+  }
+}
+
 .main {
 
   display: flex;
@@ -293,4 +750,130 @@ p {
   line-height: 50px;
   font-size: 30px;
   font-family: 'Times New Roman', Times, serif;
+}
+
+/* For mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    /* Stack elements vertically */
+    justify-content: center;
+    /* Center align items */
+    text-align: center;
+    /* Center text alignment */
+  }
+
+  .main .first,
+  .main .second {
+    font-size: 20px;
+    /* Reduce font size for smaller screens */
+    line-height: 30px;
+    /* Adjust line height */
+    margin-bottom: 20px;
+    /* Add spacing between elements */
+  }
+}
+
+/* For tablets (min-width: 768px and max-width: 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main {
+    flex-direction: row;
+    /* Keep row layout */
+    justify-content: space-evenly;
+    /* Space elements evenly */
+  }
+
+  .main .first,
+  .main .second {
+    font-size: 25px;
+    /* Adjust font size */
+    line-height: 40px;
+    /* Adjust line height */
+  }
+}
+
+/* Default styles for larger screens (1024px and above) */
+@media (min-width: 1024px) {
+  .main {
+    flex-direction: row;
+    /* Retain original layout */
+    justify-content: space-around;
+    /* Retain original alignment */
+  }
+
+  .main .first,
+  .main .second {
+    font-size: 30px;
+    /* Retain original font size */
+    line-height: 50px;
+    /* Retain original line height */
+    font-family: 'Times New Roman', Times, serif;
+    /* Original font */
+  }
+}
+
+
+.contact-container {
+ 
+  display: flex;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  justify-content: space-around;
+  align-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+h2 {
+  color: #333;
+}
+
+form {
+  margin-top: 15px;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  height: 100px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#responseMessage {
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
 }

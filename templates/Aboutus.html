@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthyMe ABout Developers</title>
+    <script src="{{ url_for('static', filename='js/Contact_us.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Aboutus.css') }}">
 </head>
 
@@ -14,9 +15,6 @@
         <li><a href="{{ url_for('home_page') }}" style="color: black;"> Home</a></li>
         <li><a href="{{ url_for('about_us') }}" style="color: black;"> About us</a></li>
         <li><a href="How to use" style="color: black;"> How to use</a></li>
-        <button class="button-19" role="button">
-            <a href="{{ url_for('login') }}" style="text-decoration: none; color: white;">Login</a>
-        </button>
     </nav>
     <div class="txtp">
         <h1>Hey! We are code devta and we are here to help you to </h1>
@@ -26,29 +24,29 @@
     <div class="col">
         <div class="row">
             <div class="container">
-                <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
+                <img src="{{ url_for('static', filename='images/udit.jpg') }}" alt="Ankesh" class="image" />
                 <div class="overlay">
-                    <div class="text">Hello World</div>
+                    <div class="text">Udit Sood<br>Team Leader<br>AI & Backend developer </div>
                 </div>
             </div>
             <div class="container">
-                <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
+                <img src="{{ url_for('static', filename='images/yugal.jpg') }}" alt="Avatar" class="image">
                 <div class="overlay">
-                    <div class="text">this is piza</div>
+                    <div class="text">Yoheshwar Tyagi <br> UI designer & Frontend</div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="container">
-                <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
+                <img src="{{ url_for('static', filename='images/abhishek.jpg') }}" alt="Avatar" class="image">
                 <div class="overlay">
-                    <div class="text">Hello World</div>
+                    <div class="text">Abhishek Joshi<br> Frontend</div>
                 </div>
             </div>
             <div class="container">
-                <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
+                <img src="{{ url_for('static', filename='images/Ankesh.jpg') }}" alt="Avatar" class="image">
                 <div class="overlay">
-                    <div class="text">this is piza</div>
+                    <div class="text">Ankesh Kumar<br>Backend</div>
                 </div>
             </div>
         </div>
@@ -56,22 +54,21 @@
     <div class="content">
 
         <div class="innercontent">
-            <img src="IMG/abhishek.jpg" alt="Avatar" class="image">
-            <p>Hi, my name is abhishek Joshi and i am from Noida institute if enginering and technology and i hold a
-                bacholres degree from Chaudhary charan singh</p>
+            <img src="{{ url_for('static', filename='images/udit.jpg') }}" alt="Udit" class="image" />
+            <p>Hi, my name is Udit sood and i am from Noida institute if enginering and technology and i hold a bacholres degree from Chaudhary charan singh and i contribute AI Building and Backend code in this Project<br>Regard:- Udit sood</p>
         </div>
         <div class="innercontent2">
-            <p>This is a Udit and he is our team leadeer</p>
-            <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
+            <p>Hi, My name is Yogeshwar Tyagi and i am from Noida institute of engineringand technology and i hold my bacholres degree of Computer application from CCSU. I provide UI design and Frontend in this project<br>Regard:- Yogeshwar Tyagi</p>
+            <img src="{{ url_for('static', filename='images/yugal.jpg') }}" alt="Yogeshwar Tyagi" class="image">
         </div>
         <div class="innercontent">
-            <img src="{{ url_for('static', filename='images/Pizza.png') }}" alt="Avatar" class="image">
-            <p>This is a Udit and he is our team leadeer</p>
+            <img src="{{ url_for('static', filename='images/abhishek.jpg') }}" alt="yugal" class="image">
+            <p>Hi, my name is Abhishek joshi and i am From Noida institute of enginering and technology and i hold bacholres degree in Computer and application from CCSU, In this project i worke as a Frontend Developer <br>Regards:- Abhishek Joshi</p>
 
         </div>
         <div class="innercontent2">
-            <p>This is a Udit and he is our team leadeer</p>
-            <img src="{{ url_for('static', filename='images/Pizza.png') }}  " alt="Avatar" class="image">
+            <p>Hi, my name is Ankesh Kumar and i am From Noida institute of enginering and technology and i hold bacholres degree in Computer and application from _, In this project i worke as a Backend Developer <br>Regards:- Ankesh Kumar</p>
+            <img src="{{ url_for('static', filename='images/Ankesh.jpg') }}  " alt="Avatar" class="image">
         </div>
     </div>
     <div class="Codevta">
@@ -95,6 +92,25 @@
                 <li>Reminder</li>
             </div>
         </div>
+    </div>
+
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>Reach out to us!</p>
+
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" placeholder="Your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+            <p id="responseMessage"></p>
+        </form>
     </div>
 
 </body>

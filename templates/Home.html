@@ -5,23 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Me</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Home.css') }}">
 </head>
 
 <body>
-
-
     <h1 class="heading">CODEDEVTA</h1>
     <nav>
         <li><a href="{{ url_for('home_page') }}" style="color: black;"> Home</a></li>
         <li><a href="{{ url_for('about_us') }}" style="color: black;"> About us</a></li>
-
         <li><a href="How to use" style="color: black;">Contact Us</a></li>
-
-        <button class="button-19" role="button">
-            <a href="{{ url_for('login') }}" style="text-decoration: none; color: white;">Login</a>
-        </button>
     </nav>
+
     <section>
         <div class="first_box">
             <div class="first_text ">
@@ -33,13 +29,12 @@
             <div class="sub_text">
                 <p>Using your BMI index we calculate</p> whether the dish is suitable for you.
             </div>
-
-
         </div>
 
         <div class="second_box">
             <div class="chat_bot">
-                <a href="{{ url_for('chatbot') }}" target=""><img src="{{ url_for('static', filename='images/Bot1.gif') }}" alt="stat"></a>
+                <a href="{{ url_for('chatbot') }}" target=""><img
+                        src="{{ url_for('static', filename='images/Bot1.gif') }}" alt="stat"></a>
                 <img src="{{ url_for('static', filename='images/doc.png') }}" alt="doc">
             </div>
         </div>
@@ -48,7 +43,8 @@
     <div class="img">
         <div class="second_text">
             <p><span>FEATURES WE PROVIDE</span></p>
-            <p class="ABz">Calculating BMI <br>is easier <img src="{{ url_for('static', filename='images/Heart Rate.png') }}" alt="stat">
+            <p class="ABz">Calculating BMI <br>is easier <img
+                    src="{{ url_for('static', filename='images/Heart Rate.png') }}" alt="stat">
             </p>
             <p class="third_class">We calculate your BMI index from<br>data like age, height, weight.</p>
         </div>
@@ -80,107 +76,25 @@
             Enhance Your Lifestyle
         </p>
     </div>
-    <div class="main_box">
-        <div class="first_layer">
-            <div class="items" id="items-box"><img src="{{ url_for('static', filename='images/PIZZA.png') }}" alt="pizza">
-                <p>Ice Cream</p>
-            </div>
-            <div class="items"><img src="{{ url_for('static', filename='images/Burger.png') }}" alt="">
-                <p>Burger</p>
-            </div>
-            <div class="items"><img src="{{ url_for('static', filename='images/PIZZA.png') }}" alt="">
-                <p>
-                    Cheez Pizza
-                </p>
-            </div>
-            <div class="items"><img src="{{ url_for('static', filename='images/ORANGE AND KIWI.png') }}" alt="">
-                <p>
-                    Orange & Kiwi Fruit
-                </p>
-            </div>
-        </div>
-
-        <div class="second_layer">
-            <div class="items"><img src="{{ url_for('static', filename='images/Soup.png') }}" alt="">
-                <p>Tomato Soup</p>
-            </div>
-            <div class="items"><img src="{{ url_for('static', filename='images/donut.png') }}" alt="">
-                <p>Donut</p>
-            </div>
-            <div class="items"><img src="{{ url_for('static', filename='images/CAKE.png') }}" alt="">
-                <p>Cake</p>
-            </div>
-            <div class="items"><img src="{{ url_for('static', filename='images/Burger.png') }}" alt="">
-                <p>Ice Cream</p>
-            </div>
-        </div>
-
-
-        <div class="modal" id="modal">
-            <div class="modal-inner">
-                <h2 id="modal-h2">Cool Tutorial!</h2>
-                <p>Do you like these kinds of fast coding tutorials? Let me know in the comments section below.</p>
-                <button id="closeModal">Close</button>
-            </div>
-        </div>
     </div>
+    
+    <section class="carousel">
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>Copyright &copy; 2025 HealthyMe. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
     <script src="{{ url_for('static', filename='js/Home.js') }}"></script>
-    <div class="ror">
 
-    </div>
-    </div>
-
-    <footer class="foot">
-        <div class="foot1">
-            <div class="firstpart">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
-                <p class="foottxt">HealthyMe</p>
-                <p style="line-height: 36px; font-size: 21px; line-height: 30px;">Lorem ipsum dolor<br>amet consectetur</p>
-
-            </div>`
-        </div>
-        <div class="foot2">
-            <div class="secondpart">
-                <h3>Product</h3>
-                <p class="product">Features</p>
-                <p class="product">Pricing</p>
-                <p class="product">Case Studies</p>
-                <p class="product">Review</p>
-                <p class="product">Update</p>
-            </div>
-        </div>
-        <div class="foot3">
-            <div class="secondpart">
-                <h3>Company</h3>
-                <p class="product">About</p>
-                <p class="product">Contact Us</p>
-                <p class="product">career</p>
-                <p class="product">Cultural</p>
-                <p class="product">Blog</p>
-            </div>
-        </div>
-        <div class="foot4">
-            <div class="secondpart">
-                <h3>Support</h3>
-                <p class="product">Getting Start</p>
-                <p class="product">Help Center</p>
-                <p class="product">Server Status</p>
-                <p class="product">Report a bug</p>
-                <p class="product">Chat Support</p>
-            </div>
-        </div>
-        <div class="foot5">
-            <div class="fifthpart" style="line-height: 30px;">
-                <p class="foottxt">Contact us</p>
-                <p><img src="{{ url_for('static', filename='images/Email.png') }}" alt="email">contact@company.com</p>
-                <p><img src="{{ url_for('static', filename='images/Phone.png') }}" alt="call">(414) 687 - 5892</p>
-                <p><img src="{{ url_for('static', filename='images/Mark.png') }}" alt="Location">794 Mcallister St
-                    San Francisco, 94102</p>
-
-            </div>
-        </div>
-    </footer>
-    <script src="Home.js"></script>
 </body>
 
 </html>
