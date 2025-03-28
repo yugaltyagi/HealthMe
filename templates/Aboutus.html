@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HealthyMe ABout Developers</title>
-    <script src="{{ url_for('static', filename='js/Contact_us.js') }}"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/Aboutus.css') }}">
 </head>
 
@@ -14,7 +13,6 @@
     <nav>
         <li><a href="{{ url_for('home_page') }}" style="color: black;"> Home</a></li>
         <li><a href="{{ url_for('about_us') }}" style="color: black;"> About us</a></li>
-        <li><a href="How to use" style="color: black;"> How to use</a></li>
     </nav>
     <div class="txtp">
         <h1>Hey! We are code devta and we are here to help you to </h1>
@@ -67,7 +65,7 @@
 
         </div>
         <div class="innercontent2">
-            <p>Hi, my name is Ankesh Kumar and i am From Noida institute of enginering and technology and i hold bacholres degree in Computer and application from _, In this project i worke as a Backend Developer <br>Regards:- Ankesh Kumar</p>
+            <p>Hi, my name is Ankesh Kumar and i am From Noida institute of enginering and technology and i hold bacholres degree in Computer and application from Patliputra University Patna, In this project i worke as a Backend Developer <br>Regards:- Ankesh Kumar</p>
             <img src="{{ url_for('static', filename='images/Ankesh.jpg') }}  " alt="Avatar" class="image">
         </div>
     </div>
@@ -78,18 +76,18 @@
         <div class="main">
             <div class="first">
                 <li>Easy to track Your report</li>
-                <li>Chat Bot Support</li>
-                <li>Affordable By everyone</li>
-                <li>Suggest Medicine in what illness</li>
+                <li>Healthy Recipes</li>
+                <li>Food with recomandation Nutrition</li>
+                <li>Help to handel Unexpected accedent</li>
                 <li>Reminder</li>
             </div>
 
             <div class="second">
-                <li>Easy to track Your report</li>
-                <li>Chat Bot Support</li>
-                <li>Affordable By everyone</li>
-                <li>Suggest Medicine in what illness</li>
-                <li>Reminder</li>
+                <li>Chatbot for quick health care queries.</li>
+                <li>Provides therapy suggestions based on symptoms.</li>
+                <li>Easily accessible.</li>
+                <li>Suggests suitable medicines.</li>
+                <li>Sends timely reminders.</li>
             </div>
         </div>
     </div>
@@ -112,7 +110,7 @@
             <p id="responseMessage"></p>
         </form>
     </div>
-
+    <script src="{{ url_for('static', filename='js/Contact_us.js') }}"></script>
 </body>
 
 </html>
