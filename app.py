@@ -1,9 +1,16 @@
 from flask import Flask, request, jsonify, render_template, redirect, url_for, flash
 import mysql.connector
 import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 app = Flask(__name__, template_folder="templates")
 app.secret_key = "your_secret_key"  
+SMTP_SERVER = "smtp.gmail.com" 
+SMTP_PORT = 587  
+SENDER_EMAIL = "thecodedevtaproject@gmail.com"  
+SENDER_PASSWORD = "fnvp sumt ziht wpji"
 
 # Home Route (Home Page)
 @app.route('/home')
@@ -86,6 +93,41 @@ def login():
             return render_template('login.html')  
 
     return render_template('login.html')
+@app.route('/contact', methods=['GET', 'POST'])
+def contact():
+    if request.method == 'POST':
+        try:
+            name = request.form.get('name')
+            email = request.form.get('email')
+            message = request.form.get('message')
+
+            if not name or not email or not message:
+                return jsonify({"error": "All fields are required!"}), 400
+
+            subject = "New Contact Form Submission"
+            body = f"Name: {name}\nEmail: {email}\n\nMessage:\n{message}"
+
+            msg = MIMEMultipart()
+            msg['From'] = SENDER_EMAIL
+            msg['To'] = SENDER_EMAIL
+            msg['Subject'] = subject
+            msg.attach(MIMEText(body, 'plain'))
+
+            try:
+                server = smtplib.SMTP(SMTP_SERVER, SMTP_PORT)
+                server.starttls()
+                server.login(SENDER_EMAIL, SENDER_PASSWORD)
+                server.sendmail(SENDER_EMAIL, SENDER_EMAIL, msg.as_string())
+                server.quit()
+                return jsonify({"message": "Message sent successfully!"})
+
+            except smtplib.SMTPException as smtp_error:
+                return jsonify({"error": f"SMTP Error: {smtp_error}"}), 500
+
+        except Exception as e:
+            return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+    return render_template("Contact_us.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
